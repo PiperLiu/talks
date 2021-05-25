@@ -6,7 +6,7 @@ if ([String]::IsNullOrEmpty($a)) {
 
 # build slidev
 Set-Location .\slidev
-npm run build -- --base="/talks/$a/"
+npm run build -- --base="/talks/talks/$a/"  # talks for github
 
 # move to setup log
 Copy-Item ./dist ../talks/$a -Recurse
