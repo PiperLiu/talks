@@ -6,4 +6,4 @@
 ./build.ps <演讲名称>
 ```
 
-在 GitHub 或者 Gitee 配置时，将 ./talk/ 配置为 page 。
+在 GitHub 或者 Gitee 配置时，将 {root} 配置为 page 。
