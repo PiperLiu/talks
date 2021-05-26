@@ -1,4 +1,4 @@
-# 接收参数（演讲名称）
+# $a is the talk's name
 param($a)
 if ([String]::IsNullOrEmpty($a)) {
     $a = Get-Date -Format 'yyyyMMdd'
@@ -6,7 +6,7 @@ if ([String]::IsNullOrEmpty($a)) {
 
 # build slidev
 Set-Location .\slidev
-npm run build -- --base="./"  # talks for github
+npm run build -- --base="/talks/talks/$a/"  # talks for github
 
 # move to setup log
 Copy-Item ./dist ../talks/$a -Recurse
