@@ -7,3 +7,12 @@
 ```
 
 在 GitHub 或者 Gitee 配置时，将 {root} 配置为 page 。
+
+### 导出 pdf
+
+```bash
+cd ./slidev
+
+npm i -D playwright-chromium
+npm run export
+```
