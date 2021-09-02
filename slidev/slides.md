@@ -132,31 +132,94 @@ Microsoft 学生大使 (Microsoft Learn Student Ambassador) 是 Microsoft 为在
 
 <img
   src="https://filestore.community.support.microsoft.com/api/images/bcf6688f-6470-47e8-886c-a5571d3db662?upload=true"
-  class="absolute top-0 left-30 opacity-30 transform -rotate-10 -scale-30"
+  class="absolute top-0 right-20 opacity-30 transform -rotate-350 -scale-30"
   style="z-index: -10"
   hover="transform -rotate-10 -scale-70"
 />
 
 ## 如何加入 MLSA ？
 
+🥰 微信公众号： 微软教育 & 微软学生汇
+
+🎓 https://studentambassadors.microsoft.com/
+
+## MLSA 小福利
+
+- 拥有 Microsoft 365 和 Visual Studio Enterprise 订阅，各种技能快速提升。
+- 每月价值 150 美元的 Global Azure Credit 信用额度，离技术梦想更进一步。
+- 有机会参与各项学生大使活动，与全球 MLSA 交流协作。
+- 学习最前沿科技知识，并获得专家指导，提升技能。
+- 获得一张 Microsoft 认证考券，还可参加专业技能培训。
+- 优先参与 Microsoft 大会，组织各种活动，获得 Microsoft 资源支持。
+- 第一时间获得 Microsoft 周边福利，有机会拥有 MLSA 证书及礼品。
+
 <img
   src="https://gitee.com/piperliu/picture/raw/master/2021-9-2/1630573012798-%E5%BE%AE%E8%BD%AF%E6%95%99%E8%82%B2.jpg"
-  class="absolute top-0 left-30 opacity-30 transform -scale-30"
-  style="z-index: -10"
+  class="absolute top-5 left-150 opacity-70 transform -scale-30"
   hover="transform -scale-70"
 />
 
 <img
   src="https://gitee.com/piperliu/picture/raw/master/2021-9-2/1630573017414-%E5%BE%AE%E8%BD%AF%E5%AD%A6%E7%94%9F%E6%B1%87.jpg"
-  class="absolute top-0 left-30 opacity-30 transform -scale-30"
-  style="z-index: -10"
+  class="absolute top-55 left-150 opacity-70 transform -scale-30"
   hover="transform -scale-70"
 />
 
+<style>
+  h2 {
+    margin: 0 5px;
+  }
+  ul {
+    margin: 8px 0;
+  }
+  li {
+    font-size: 15px;
+  }
+</style>
+
 ---
 
-https://piperliu.github.io/talks/talks/20210903_MLSA_Azure
+## 本讲内容概要
+### 用时 1 hour+ || 所有材料均可获得
 
-https://piperliu.gitee.io/talks/20210903_MLSA_Azure/
+<div grid="~ cols-2 gap-4">
+<div>
 
-https://gitee.com/piperliu/talks/raw/master/talks/20210903_MLSA_Azure/20210903_MLSA_Azure.pdf
+<!-- 左边 -->
+
+🐠 在线幻灯片：[github地址](https://piperliu.github.io/talks/talks/20210903_MLSA_Azure)、[gitee地址](https://piperliu.gitee.io/talks/20210903_MLSA_Azure/)
+
+🖨️ PDF 版下载地址：[下载地址](https://gitee.com/piperliu/talks/raw/master/talks/20210903_MLSA_Azure/20210903_MLSA_Azure.pdf)
+
+🪂 强化学习项目地址：[PiperLiu/Amazing-Brick-DFS-and-DRL](https://github.com/PiperLiu/Amazing-Brick-DFS-and-DRL)
+
+### 『一』无处不在的微软
+
+- 几乎找不到没用过微软产品的人：常见的微软产品（3分钟）
+- 微软的基础设施服务与社区贡献（3分钟）
+- 身为技术爱好者，微软形象在我心中的变化：从“恶龙”到“勇士”（4分钟）
+
+</div>
+<div>
+
+<!-- 右边 -->
+
+
+### 『二』你我与“云”
+
+- 计算机如何与我们交互？命令、服务器与云（8分钟）
+- 简单的 Linux 命令：谁都能当“齐天大圣”（7分钟）
+
+### 『三』现场实践：一起“云游天下”
+
+- 使用 python 制作一款能立即玩的 Amazing-bricks ！（7分钟）
+- 人工智障？人工智能？强化学习简介（10分钟）
+- 一起动手！在“云”上训练我的人工智障！（8分钟）
+
+### 总结
+
+- 讲座内容梳理（3分钟）
+- Q&A
+
+</div>
+</div>
