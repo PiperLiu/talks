@@ -13,7 +13,7 @@ Copy-Item ./dist ../talks/$a -Recurse
 
 # for gitee
 # build slidev
-npm run build -- --base="/$a/"  # talks for github
+npm run build -- --base="/talks/$a/"  # talks for github
 
 # move to setup log
 Copy-Item ./dist ../gitee/$a -Recurse
