@@ -431,7 +431,105 @@ AI算法按照训练方式分类：
 |AlphaZero|❌|任何棋类|✔|
 |MuZero|❌|任何棋类、电子游戏|❌|
 
+<img
+  src="https://gitee.com/piperliu/picture/raw/master/2021-9-3/1630656063400-output_5.gif"
+  class="absolute top-25 left-120 opacity-100 transform -scale-90"
+  hover="transform -scale-120"
+  v-click="1"
+/>
+
 ---
 
 ## 人工智障？人工智能？强化学习简介
 ### 强化学习概念与简单原理
+
+监督学习：
+- 妈妈👩告诉小佳👶：这种动物是小猫🐈
+- **特点：** 输入的数据包括（特征值，标签）两部分
+
+无监督学习：
+- 妈妈👩问小佳👶：这些积木里哪个不一样，你如何区分它们？
+- 小佳👶：这两个是蓝色🔷的，其他都是红色🔻的！
+- **特点：** 只有特征值，剩下自己找规律
+
+强化学习：
+- 小佳👶练习打乒乓球🏓，并且看别人打乒乓球🏓
+- **特点：** 没有数据，在交互中学习对未来有益的动作，可以理解为实时控制系统
+
+---
+
+## 一起动手！在“云”上训练我的人工智障！（8分钟）
+
+![](https://gitee.com/piperliu/picture/raw/master/2021-9-3/1630654098755-image.png)
+
+效果展示 · 训练效果 · 操作演示
+
+### 注意的点：`torch版本` 与 `os.environ["SDL_VIDEODRIVER"] = "dummy"`
+
+---
+
+## 由此引发的进一步讨论：举一反三的强化学习？
+
+<br />
+
+- DFS
+  - 环境完全可以预测
+  - 可以暂停时间来“算计步骤”
+
+- 强化学习
+  - “举一反三”泛化了学习到的场景
+  - 每次做动作时，都是“下意识”的，不需要“算计步骤”
+
+### 关于 Azure 更多的学习资源
+
+<br />
+
+- **Microsoft Learning** [https://docs.microsoft.com/zh-cn/learn/?source=learn](https://docs.microsoft.com/zh-cn/learn/?source=learn)
+- [Azure Machine Learning 知多少?](https://www.bilibili.com/video/BV1ML411t7bP)
+
+---
+
+## 本讲内容总结
+### 用时 1 hour+ || 所有材料均可获得
+
+<div grid="~ cols-2 gap-4">
+<div>
+
+<!-- 左边 -->
+
+🐠 在线幻灯片：[github地址](https://piperliu.github.io/talks/talks/20210903_MLSA_Azure)、[gitee地址](https://piperliu.gitee.io/talks/20210903_MLSA_Azure/)
+
+🖨️ PDF 版下载地址：[下载地址](https://gitee.com/piperliu/talks/raw/master/talks/20210903_MLSA_Azure/20210903_MLSA_Azure.pdf)
+
+🪂 强化学习项目地址：[PiperLiu/Amazing-Brick-DFS-and-DRL](https://github.com/PiperLiu/Amazing-Brick-DFS-and-DRL)
+
+### 『一』无处不在的微软
+
+- 几乎找不到没用过微软产品的人：常见的微软产品（3分钟）
+- 微软的基础设施服务与社区贡献（3分钟）
+- 身为技术爱好者，微软形象在我心中的变化：从“恶龙”到“勇士”（4分钟）
+
+</div>
+<div>
+
+<!-- 右边 -->
+
+
+### 『二』你我与“云”
+
+- 计算机如何与我们交互？命令、服务器与云（8分钟）
+- 简单的 Linux 命令：谁都能当“齐天大圣”（7分钟）
+
+### 『三』现场实践：一起“云游天下”
+
+- 使用 python 制作一款能立即玩的 Amazing-bricks ！（7分钟）
+- 人工智障？人工智能？强化学习简介（10分钟）
+- 一起动手！在“云”上训练我的人工智障！（8分钟）
+
+### 总结
+
+- 讲座内容梳理（3分钟）
+- Q&A
+
+</div>
+</div>
