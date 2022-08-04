@@ -1,244 +1,385 @@
 ---
-theme: default
-background: https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&dl=christopher-gower-m_HRfLhgABo-unsplash.jpg
-class: text-center
+# try also 'default' to start simple
+theme: seriph
+# random image from a curated Unsplash collection by Anthony
+# like them? see https://unsplash.com/collections/94734566/slidev
+background: https://source.unsplash.com/collection/94734566/1920x1080
+# apply any windi css classes to the current slide
+class: 'text-center'
+# https://sli.dev/custom/highlighters.html
 highlighter: shiki
+# show line numbers in code blocks
+lineNumbers: false
+# some information about the slides, markdown enabled
 info: |
-  piperliu@qq.com
+  ## Slidev Starter Template
+  Presentation slides for developers.
+
+  Learn more at [Sli.dev](https://sli.dev)
+# persist drawings in exports and build
+drawings:
+  persist: false
+# use UnoCSS (experimental)
+css: unocss
 ---
 
-# 前端 Web 技术小分享
-## 从 🤓“切图仔” 到 🤠“艺术家” 的逆袭
+# Welcome to Slidev
 
-<br>
-<br>
-<br>
+Presentation slides for developers
 
-刘洪佳 2021年10月11日
+<div class="pt-12">
+  <span @click="$slidev.nav.next" class="px-2 py-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
+    Press Space for next page <carbon:arrow-right class="inline"/>
+  </span>
+</div>
 
-经管学部2020级硕士生第三党支部
+<div class="abs-br m-6 flex gap-2">
+  <button @click="$slidev.nav.openInEditor()" title="Open in Editor" class="text-xl icon-btn opacity-50 !border-none !hover:text-white">
+    <carbon:edit />
+  </button>
+  <a href="https://github.com/slidevjs/slidev" target="_blank" alt="GitHub"
+    class="text-xl icon-btn opacity-50 !border-none !hover:text-white">
+    <carbon-logo-github />
+  </a>
+</div>
 
-<!-- 
-计算机网络
-前端切图仔
-前后端分离
-CSS艺术家
-JavaScript
- -->
+<!--
+The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
+-->
 
 ---
 
-![https://www.bilibili.com/video/BV1P44y1x7Wx](https://gitee.com/piperliu/picture/raw/master/2021-10-11/1633921931242-image.png)
+# What is Slidev?
 
----
+Slidev is a slides maker and presenter designed for developers, consist of the following features
 
-## 所以...
+- 📝 **Text-based** - focus on the content with Markdown, and then style them later
+- 🎨 **Themable** - theme can be shared and used with npm packages
+- 🧑‍💻 **Developer Friendly** - code highlighting, live coding with autocompletion
+- 🤹 **Interactive** - embedding Vue components to enhance your expressions
+- 🎥 **Recording** - built-in recording and camera view
+- 📤 **Portable** - export into PDF, PNGs, or even a hostable SPA
+- 🛠 **Hackable** - anything possible on a webpage
 
 <br>
 <br>
 
-<ul>
-  <li>
-    🌎 我们访问某个网页时，就先找到某个服务器，发送请求
-  </li>
-  <li>
-    📄 服务器把网页信息发送到我们的电脑
-  </li>
-</ul>
+Read more about [Why Slidev?](https://sli.dev/guide/why)
 
-发送的信息可以分为四种：
-
-<p
-  class="absolute top-70 left-30 opacity-100 transform -scale-250"
-  hover="transform -scale-300"
-  id="html"
->
-  Html
-</p>
-
-<p
-  class="absolute top-90 left-10 opacity-100 transform -scale-100"
-  hover="transform -scale-300"
->
-  简单理解为 txt 与表格
-</p>
-
-<p
-  class="absolute top-70 left-70 opacity-100 transform -scale-250"
-  hover="transform -scale-300"
-  id="css"
->
-  CSS
-</p>
-
-<p
-  class="absolute top-90 left-60 opacity-100 transform -scale-100"
-  hover="transform -scale-300"
->
-  简单理解为格式刷
-</p>
-
-<p
-  class="absolute top-70 left-115 opacity-100 transform -scale-250"
-  hover="transform -scale-300"
-  id="javascript"
->
-  JavaScript
-</p>
-
-<p
-  class="absolute top-90 left-105 opacity-100 transform -scale-100"
-  hover="transform -scale-300"
->
-  简单理解为交互逻辑
-</p>
-
-<p
-  class="absolute top-70 left-180 opacity-100 transform -scale-250"
-  hover="transform -scale-300"
-  id="assets"
->
-  Assets
-</p>
-
-<p
-  class="absolute top-90 left-175 opacity-100 transform -scale-100"
-  hover="transform -scale-300"
->
-  图片等资源
-</p>
+<!--
+You can have `style` tag in markdown to override the style for the current page.
+Learn more: https://sli.dev/guide/syntax#embedded-styles
+-->
 
 <style>
-#html {
+h1 {
   background-color: #2B90B6;
   background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
   background-size: 100%;
   -webkit-background-clip: text;
   -moz-background-clip: text;
-  -webkit-text-fill-color: transparent; 
-  -moz-text-fill-color: transparent;
-}
-
-#css {
-  background-color: #2B90B6;
-  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
-  background-size: 100%;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent; 
-  -moz-text-fill-color: transparent;
-}
-
-#javascript {
-  background-color: #2B90B6;
-  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
-  background-size: 100%;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent; 
-  -moz-text-fill-color: transparent;
-}
-
-#assets {
-  background-color: #2B90B6;
-  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
-  background-size: 100%;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent; 
+  -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
 }
 </style>
 
 ---
 
-### 过去...
-## 🤓“切图仔”
+# Navigation
 
-![https://zhuanlan.zhihu.com/p/53211263](https://gitee.com/piperliu/picture/raw/master/2021-10-11/1633929434278-QQ%E6%88%AA%E5%9B%BE202110111316a43.png)
+Hover on the bottom-left corner to see the navigation's controls panel, [learn more](https://sli.dev/guide/navigation.html)
 
-<style>
-img {
-  margin: auto auto;
-}
-</style>
+### Keyboard Shortcuts
 
----
+|     |     |
+| --- | --- |
+| <kbd>right</kbd> / <kbd>space</kbd>| next animation or slide |
+| <kbd>left</kbd>  / <kbd>shift</kbd><kbd>space</kbd> | previous animation or slide |
+| <kbd>up</kbd> | previous slide |
+| <kbd>down</kbd> | next slide |
 
-### 过去...
-## 🤓“切图仔”
-
-以前啊，美工出了设计图，要被做成页面。那时候 `CSS` 还相对较弱，大量的设计效果不是通过样式可以做到的。需要前端岗位工作者把设计稿内一些图形元素从 `PS` 等原始设计稿内裁切出来，放在页面的 `img` 标签中或者 `CSS background-image` 样式中使用。
-
-而当时由于能用好或者说会用 `JS` 的人就不多，页面上也没有那么多交互需求要做。大量前端岗位的两个主要任务一个是切图做页面，另一个是在用 `JS` 做简单的表单内容校验。甚至俺记得 2004 那会儿面试，几乎前端里都找不到会写正则的。实际情况就这样。
-
-因为是大部分人在做切图，也就自嘲为切图仔了。
-
-ps：这里说的前端代指曾经的前端。毕竟老早那会儿都没这个名字岗位，俺上班时候完全不分，好多曾经的前端岗位要干的事儿都是现在所谓的后端顺手干了。只有大批量要产出页面的公司可能会有个对应的岗位，俺记得俺刚上班那会儿，俺入职的公司给这类要做页面又要合成后端代码在页面中的岗位叫程序合成员……
-
-> 作者：貘吃馍香
-> 链接：https://www.zhihu.com/question/449692495/answer/1810587343
-> 来源：知乎
-
----
-
-### 现在...
-## CSS🆙 生态🆙🆙🆙
-
-<br>
-<br>
-
-- 前后端分离更加必要
-  - 前端交互逻辑变得复杂、更注重性能
-  - 后端也可以专注于自己的业务
-- HTML5 与 CSS 的发展
-- JavaScript 生态与框架崛起
-
-![](https://gitee.com/piperliu/picture/raw/master/2021-10-11/1633929848508-clear1.gif)
-
-> [2012 年尤雨溪用 HTML5 模仿出 Clear 应用技惊四座](https://gitee.com/piperliu/picture/raw/master/2021-10-11/1633929848508-clear1.gif)
-
-<p v-click="1">
-  前端逐渐成为一个专业化的工种，而在前端领域，又细分出许多截然的工程师类别...
-</p>
-
----
-
-## 🤠“CSS艺术家”
-
-![](https://gitee.com/piperliu/picture/raw/master/2021-10-11/1633934051645-css1.gif)
-
----
-
-## 🤠“CSS艺术家”
-
-![https://css-doodle.com/](https://gitee.com/piperliu/picture/raw/master/2021-10-11/1633934357015-css2.gif)
-
----
-
-## 👼JavaScript [试一下](https://mp.weixin.qq.com/s/_9LYVLu_0Ps3M44AUPV26g)
-
+<!-- https://sli.dev/guide/animations.html#click-animations -->
 <img
-  src="https://gitee.com/piperliu/picture/raw/master/2021-10-11/1633934867281-%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20211011144729.jpg"
+  v-click
+  class="absolute -bottom-9 -left-7 w-80 opacity-50"
+  src="https://sli.dev/assets/arrow-bottom-left.svg"
 />
+<p v-after class="absolute bottom-23 left-45 opacity-30 transform -rotate-10">Here!</p>
 
-<!-- http://www.reddit.com/r/ProgrammerHumor/ -->
+---
+layout: image-right
+image: https://source.unsplash.com/collection/94734566/1920x1080
+---
+
+# Code
+
+Use code snippets and get the highlighting directly![^1]
+
+```ts {all|2|1-6|9|all}
+interface User {
+  id: number
+  firstName: string
+  lastName: string
+  role: string
+}
+
+function updateUser(id: number, update: User) {
+  const user = getUser(id)
+  const newUser = { ...user, ...update }
+  saveUser(id, newUser)
+}
+```
+
+<arrow v-click="3" x1="400" y1="420" x2="230" y2="330" color="#564" width="3" arrowSize="1" />
+
+[^1]: [Learn More](https://sli.dev/guide/syntax.html#line-highlighting)
 
 <style>
-img {
-  height: 450px;
-  margin: auto;
+.footnotes-sep {
+  @apply mt-20 opacity-10;
+}
+.footnotes {
+  @apply text-sm opacity-75;
+}
+.footnote-backref {
+  display: none;
 }
 </style>
 
 ---
 
-## 引用
+# Components
+
+<div grid="~ cols-2 gap-4">
+<div>
+
+You can use Vue components directly inside your slides.
+
+We have provided a few built-in components like `<Tweet/>` and `<Youtube/>` that you can use directly. And adding your custom components is also super easy.
+
+```html
+<Counter :count="10" />
+```
+
+<!-- ./components/Counter.vue -->
+<Counter :count="10" m="t-4" />
+
+Check out [the guides](https://sli.dev/builtin/components.html) for more.
+
+</div>
+<div>
+
+```html
+<Tweet id="1390115482657726468" />
+```
+
+<Tweet id="1390115482657726468" scale="0.65" />
+
+</div>
+</div>
+
+
+---
+class: px-20
+---
+
+# Themes
+
+Slidev comes with powerful theming support. Themes can provide styles, layouts, components, or even configurations for tools. Switching between themes by just **one edit** in your frontmatter:
+
+<div grid="~ cols-2 gap-2" m="-t-2">
+
+```yaml
+---
+theme: default
+---
+```
+
+```yaml
+---
+theme: seriph
+---
+```
+
+<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-default/01.png?raw=true">
+
+<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-seriph/01.png?raw=true">
+
+</div>
+
+Read more about [How to use a theme](https://sli.dev/themes/use.html) and
+check out the [Awesome Themes Gallery](https://sli.dev/themes/gallery.html).
+
+---
+preload: false
+---
+
+# Animations
+
+Animations are powered by [@vueuse/motion](https://motion.vueuse.org/).
+
+```html
+<div
+  v-motion
+  :initial="{ x: -80 }"
+  :enter="{ x: 0 }">
+  Slidev
+</div>
+```
+
+<div class="w-60 relative mt-6">
+  <div class="relative w-40 h-40">
+    <img
+      v-motion
+      :initial="{ x: 800, y: -100, scale: 1.5, rotate: -50 }"
+      :enter="final"
+      class="absolute top-0 left-0 right-0 bottom-0"
+      src="https://sli.dev/logo-square.png"
+    />
+    <img
+      v-motion
+      :initial="{ y: 500, x: -100, scale: 2 }"
+      :enter="final"
+      class="absolute top-0 left-0 right-0 bottom-0"
+      src="https://sli.dev/logo-circle.png"
+    />
+    <img
+      v-motion
+      :initial="{ x: 600, y: 400, scale: 2, rotate: 100 }"
+      :enter="final"
+      class="absolute top-0 left-0 right-0 bottom-0"
+      src="https://sli.dev/logo-triangle.png"
+    />
+  </div>
+
+  <div
+    class="text-5xl absolute top-14 left-40 text-[#2B90B6] -z-1"
+    v-motion
+    :initial="{ x: -80, opacity: 0}"
+    :enter="{ x: 0, opacity: 1, transition: { delay: 2000, duration: 1000 } }">
+    Slidev
+  </div>
+</div>
+
+<!-- vue script setup scripts can be directly used in markdown, and will only affects current page -->
+<script setup lang="ts">
+const final = {
+  x: 0,
+  y: 0,
+  rotate: 0,
+  scale: 1,
+  transition: {
+    type: 'spring',
+    damping: 10,
+    stiffness: 20,
+    mass: 2
+  }
+}
+</script>
+
+<div
+  v-motion
+  :initial="{ x:35, y: 40, opacity: 0}"
+  :enter="{ y: 0, opacity: 1, transition: { delay: 3500 } }">
+
+[Learn More](https://sli.dev/guide/animations.html#motion)
+
+</div>
+
+---
+
+# LaTeX
+
+LaTeX is supported out-of-box powered by [KaTeX](https://katex.org/).
 
 <br>
-<br>
+
+Inline $\sqrt{3x-1}+(1+x)^2$
+
+Block
+$$
+\begin{array}{c}
+
+\nabla \times \vec{\mathbf{B}} -\, \frac1c\, \frac{\partial\vec{\mathbf{E}}}{\partial t} &
+= \frac{4\pi}{c}\vec{\mathbf{j}}    \nabla \cdot \vec{\mathbf{E}} & = 4 \pi \rho \\
+
+\nabla \times \vec{\mathbf{E}}\, +\, \frac1c\, \frac{\partial\vec{\mathbf{B}}}{\partial t} & = \vec{\mathbf{0}} \\
+
+\nabla \cdot \vec{\mathbf{B}} & = 0
+
+\end{array}
+$$
+
 <br>
 
-- 曾经的前端为什么被称为切图仔？ - 貘吃馍香的回答 - 知乎 https://www.zhihu.com/question/449692495/answer/1810587343
-- 前端的发展历程 - 谭光志的文章 - 知乎 https://zhuanlan.zhihu.com/p/53211263
-- `<css-doodle />` https://css-doodle.com/
+[Learn more](https://sli.dev/guide/syntax#latex)
+
+---
+
+# Diagrams
+
+You can create diagrams / graphs from textual descriptions, directly in your Markdown.
+
+<div class="grid grid-cols-3 gap-10 pt-4 -mb-6">
+
+```mermaid {scale: 0.5}
+sequenceDiagram
+    Alice->John: Hello John, how are you?
+    Note over Alice,John: A typical interaction
+```
+
+```mermaid {theme: 'neutral', scale: 0.8}
+graph TD
+B[Text] --> C{Decision}
+C -->|One| D[Result 1]
+C -->|Two| E[Result 2]
+```
+
+```plantuml {scale: 0.7}
+@startuml
+
+package "Some Group" {
+  HTTP - [First Component]
+  [Another Component]
+}
+
+node "Other Groups" {
+  FTP - [Second Component]
+  [First Component] --> FTP
+}
+
+cloud {
+  [Example 1]
+}
+
+
+database "MySql" {
+  folder "This is my folder" {
+    [Folder 3]
+  }
+  frame "Foo" {
+    [Frame 4]
+  }
+}
+
+
+[Another Component] --> [Example 1]
+[Example 1] --> [Folder 3]
+[Folder 3] --> [Frame 4]
+
+@enduml
+```
+
+</div>
+
+[Learn More](https://sli.dev/guide/syntax.html#diagrams)
+
+
+---
+layout: center
+class: text-center
+---
+
+# Learn More
+
+[Documentations](https://sli.dev) · [GitHub](https://github.com/slidevjs/slidev) · [Showcases](https://sli.dev/showcases.html)
