@@ -2,8 +2,8 @@ import random
 import json
 
 NAMES = 1500
-LENGTH = 10000
-RULES = 20000
+LENGTH = 100000
+RULES = 500000
 
 def generate_random_str(length=16):
     random_str = ''
