@@ -89,7 +89,7 @@ func (self *Calculater) Cal() {
 }
 
 func main() {
-	jsonFile, err := os.Open("rules.json")
+	jsonFile, err := os.Open("../../temp/rules.json")
 	if err != nil {
 		panic(err)
 	}

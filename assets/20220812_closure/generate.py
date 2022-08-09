@@ -28,5 +28,5 @@ if __name__ == '__main__':
             'name3': name3,
             'rule': rule
         })
-    with open('rules.json', 'w') as f:
+    with open('../../temp/rules.json', 'w') as f:
         json.dump(rules, f)

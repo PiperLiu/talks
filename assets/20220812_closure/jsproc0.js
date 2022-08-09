@@ -39,7 +39,7 @@ class Calculator {
 
 function main() {
     fs = require('fs')
-    const rules = JSON.parse(fs.readFileSync('./rules.json', 'utf8'))
+    const rules = JSON.parse(fs.readFileSync('./../../temp/rules.json', 'utf8'))
 
     let ct = Date.now()
     const calc = new Calculator(rules)

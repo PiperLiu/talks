@@ -29,7 +29,7 @@ class Calculator:
                 self.values[name3] = self.values[name1] & self.values[name2]
 
 if __name__ == '__main__':
-    rules = json.load(open('rules.json'))
+    rules = json.load(open('../../temp/rules.json'))
 
     ct = time.time()
     calculator = Calculator(rules)

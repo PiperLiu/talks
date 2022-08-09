@@ -69,7 +69,7 @@ class Calculator:
             func()
 
 if __name__ == '__main__':
-    rules = json.load(open('rules.json'))
+    rules = json.load(open('../../temp/rules.json'))
 
     ct = time.time()
     calculator = Calculator(rules)
