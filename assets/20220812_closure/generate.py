@@ -2,15 +2,14 @@ import random
 import json
 
 NAMES = 1500
-LENGTH = 100000
+LENGTH = 100
 RULES = 500000
 
 def generate_random_str(length=16):
     random_str = ''
     base_str = 'ABCDEFGHIGKLMNOPQRSTUVWXYZabcdefghigklmnopqrstuvwxyz0123456789'
-    length = len(base_str) -1
     for _ in range(length):
-        random_str += base_str[random.randint(0, length)]
+        random_str += base_str[random.randint(0, len(base_str) - 1)]
     return random_str
 
 if __name__ == '__main__':
