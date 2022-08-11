@@ -1,29 +1,42 @@
-# https://www.pypy.org/posts/2022/07/m1-support-for-pypy.html
-# https://buildbot.pypy.org/nightly/py3.8/
-
 .PHONY : clean
 clean :
 	@rm -rf ../../temp
 
 # python
-PY3 = /usr/bin/python3
+PYTHON3 = /usr/bin/python3
 
 .PHONY : preprocess
 preprocess : clean
 	@mkdir ../../temp
 	@touch ../../temp/result.txt
-	@$(PY3) ./generate.py
+	@$(PYTHON3) ./generate.py
 
-define py3f
+define python3f
 	@echo 'python3 $(1)' >> ../../temp/result.txt
-	$(PY3) pyproc$(1).py >> ../../temp/result.txt
+	$(PYTHON3) pyproc$(1).py >> ../../temp/result.txt
 endef
 
 .PHONY : python3
 python3: preprocess
-	$(call py3f,0)
-	$(call py3f,1)
-	$(call py3f,2)
+	$(call python3f,0)
+	$(call python3f,1)
+	$(call python3f,2)
+
+# pypy
+# https://www.pypy.org/posts/2022/07/m1-support-for-pypy.html
+# https://buildbot.pypy.org/nightly/py3.8/
+PYPY3 = /Users/piperliu/Github/downloads/pypy-c-jit-105934-1b027cda9f26-macos_arm64/bin/pypy3.8
+
+define pypy3f
+	@echo 'pypy3 $(1)' >> ../../temp/result.txt
+	$(PYPY3) pyproc$(1).py >> ../../temp/result.txt
+endef
+
+.PHONY : pypy3
+pypy3: preprocess
+	$(call pypy3f,0)
+	$(call pypy3f,1)
+	$(call pypy3f,2)
 
 # cpp
 CC=/usr/bin/g++
@@ -71,4 +84,4 @@ js: preprocess
 	$(call jsf,2)
 
 .PHONY : all
-all: python3 cpp go js
+all: python3 pypy3 cpp go js
