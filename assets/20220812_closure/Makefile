@@ -40,7 +40,7 @@ pypy3: preprocess
 
 # cpp
 CC=/usr/bin/g++
-CPPFLAGS=-Idist-jsoncpp -std=c++17
+CPPFLAGS=-Idist-jsoncpp -std=c++17 -O3
 CPP_SRC=dist-jsoncpp/jsoncpp.cpp
 
 define cppf
